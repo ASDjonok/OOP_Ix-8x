@@ -8,11 +8,13 @@ public class Main {
                 new StringBuffer("Hello! I am happy!");
         stringBuffer.length();
         int indexDelimiter = stringBuffer.indexOf("!");
-        ArrayList<StringBuffer> sentences = new ArrayList();
+        ArrayList/*<StringBuffer>*/ sentences = new ArrayList();
         String sentence = stringBuffer.substring(0,
                 indexDelimiter);
+
         sentences.add(new StringBuffer(sentence));
-        StringBuffer x = sentences.get(0);
+        sentences.add("");
+        StringBuffer x = (StringBuffer) sentences.get(1);
         System.out.println(x);
         System.out.println(x.length());
     }
