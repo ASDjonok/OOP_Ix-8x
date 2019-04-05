@@ -1,6 +1,9 @@
 package lab4;
 
+import lab5.Punctuation;
+
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +16,17 @@ public class Main {
                 "IV", 81, 100);
 //        System.out.println(students[0].compareTo(students[1]));
 //        Arrays.sort(students);
-        Arrays.sort(students, new ComparatorByName());
+//        Arrays.sort(students, new ComparatorByName());
+        /*Arrays.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });*/
+        /*Arrays.sort(students, (o1, o2) ->
+                o1.getName().compareTo(o2.getName()));*/
+        Arrays.sort(students, Comparator.comparing(Student::getName));
+
         for (Student student : students) {
             System.out.println(student/*.toString()*/);
         }
