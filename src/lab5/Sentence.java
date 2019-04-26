@@ -1,7 +1,7 @@
 package lab5;
 
 public class Sentence {
-    private Object[] sentenceElements;
+    private SentenceElement[] sentenceElements;
     public Sentence(String sentenceString) {
         // todo work with dash and brackets
         String[] sentenceElementsStrings =
@@ -9,7 +9,7 @@ public class Sentence {
                         Punctuation.punctuationSymbols +
                         "])| ");
         sentenceElements =
-                new Object[sentenceElementsStrings.length];
+                new SentenceElement[sentenceElementsStrings.length];
         for (int i = 0; i < sentenceElementsStrings.length; i++) {
             if (Punctuation.isPunctuationString(sentenceElementsStrings[i])) {
                 sentenceElements[i] = new Punctuation(sentenceElementsStrings[i]);

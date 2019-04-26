@@ -1,6 +1,6 @@
 package lab5;
 
-public class Word {
+public class Word extends SentenceElement {
     private Letter[] letters;
 
     public Word(String wordString) {
