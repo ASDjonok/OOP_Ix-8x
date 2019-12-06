@@ -4,7 +4,27 @@ public class Main {
         m1(1.2);
         m1(2);
         m1("#@)₴?$0");
+
+        int a = 1;
+        m(a);
+        Integer i = null/*new Integer(1)*/;
+//        mm(i/*.intValue()*/);
+        mmm();
     }
+
+    static void m(Integer i){
+
+    }
+
+    static void mm(int i){
+
+    }
+
+    static int mmm() {
+//        Integer i = null;
+        return (true ? null : 0);
+    }
+
 
     private static void m1() {
         System.out.println("In m1()");

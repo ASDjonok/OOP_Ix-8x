@@ -39,7 +39,10 @@ public /*abstract*/ class MyList implements List<Student> {
     }
 
     @Override
-    public boolean add(Student student) {
+    public boolean add(Student student)/* throws NoOleksiiException*/{
+        if (student.getName().equals("Oleksii")) {
+            throw new NoOleksiiException();
+        }
         return false;
     }
 

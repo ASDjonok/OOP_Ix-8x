@@ -1,14 +1,15 @@
 package lab4;
 
 import lab5.Punctuation;
+import lab8.WrongNameException;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongNameException {
         Student[] students = new Student[3];
-        students[0] = new Student("Тетяна", "Дьяченко",
+        students[0] = new Student("", "Дьяченко",
                 "IV", 81, 100);
         students[1] = new Student("Олексій", "Самутін",
                 "IO", 82, 100);

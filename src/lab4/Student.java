@@ -1,5 +1,7 @@
 package lab4;
 
+import lab8.WrongNameException;
+
 /**
  * Class that represents Student
  */
@@ -20,7 +22,10 @@ public class Student implements Comparable<Student>{
      */
     public Student(String name, String surname,
                    String groupSpecialization,
-                   int groupNumber, double averageMark) {
+                   int groupNumber, double averageMark) throws WrongNameException {
+        if (name.equals("")) {
+            throw new WrongNameException();
+        }
         this.name = name;
         this.surname = surname;
         this.groupSpecialization = groupSpecialization;
